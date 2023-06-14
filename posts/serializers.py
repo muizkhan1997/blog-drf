@@ -41,4 +41,4 @@ class PostDetailedSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         response_dict = super().to_representation(instance)
-        return response_dict["title"]      
+        return f"{{id: '{response_dict['id']}', title: '{response_dict['title']}'}}"
